@@ -1,0 +1,43 @@
+<resources>
+
+	<style name="DefaultTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">@color/primaryColor</item>
+		<item name="colorPrimaryDark">@color/primaryDarkColor</item>
+		<item name="colorAccent">@color/accentColor</item>
+	</style>
+	<!-- Base application theme. -->
+	<style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/primaryColor</item>
+		<item name="colorPrimaryDark">@color/primaryDarkColor</item>
+		<item name="colorAccent">@color/accentColor</item>
+
+		<item name="android:colorBackground">@color/primaryBackgroundColor</item>
+
+		<item name="android:textColorPrimary">@color/primaryTextColorInverse</item>
+		<item name="android:textColorSecondary">@color/secondaryTextColor</item>
+		<!--<item name="android:textColorTertiary">@color/tertiaryTextColor</item>-->
+
+		<item name="android:textAppearance">@style/AppTheme.TextAppearance</item>
+		<item name="android:textAppearanceSmall">@style/AppTheme.TextAppearance.Small</item>
+		<item name="android:textAppearanceLarge">@style/AppTheme.TextAppearance.Large</item>
+		<item name="android:textAppearanceMedium">@style/AppTheme.TextAppearance.Medium</item>
+	</style>
+
+	<style name="AppTheme.TextAppearance" parent="TextAppearance.AppCompat">
+		<item name="android:textColor">@color/primaryTextColor</item>
+	</style>
+
+	<style name="AppTheme.TextAppearance.Large" parent="TextAppearance.AppCompat.Large">
+		<item name="android:textColor">@color/primaryTextColor</item>
+	</style>
+
+	<style name="AppTheme.TextAppearance.Medium" parent="TextAppearance.AppCompat.Medium">
+		<item name="android:textColor">@color/secondaryTextColor</item>
+	</style>
+
+	<style name="AppTheme.TextAppearance.Small" parent="TextAppearance.AppCompat.Small">
+		<item name="android:textColor">@color/primaryTextColor</item>
+	</style>
+
+</resources>
