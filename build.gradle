@@ -30,4 +30,7 @@ task clean(type: Delete) {
 ext {
     // architecture component 的版本
     archVersion="1.0.0-alpha9"
+
+    // support 包的版本
+    supportVersion="26.0.1"
 }

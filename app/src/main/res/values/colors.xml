@@ -13,5 +13,7 @@
 	<color name="textColorHint">#56000000</color>
 
 	<color name="iconAndTextColor">#FFFFFF</color>
-	<color name="divider">#BDBDBD</color>
+	<color name="divider">#1F000000</color>
+
+	<color name="textFieldBackgroundColor">#E0E0E0</color>
 </resources>

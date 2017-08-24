@@ -32,7 +32,7 @@ public class EditorActivity extends BaseActivity {
 
 	private boolean initFragment(@Nullable Bundle savedInstanceState) {
 		if (savedInstanceState == null) {
-			editorFragment = EditorFragment.newInstance(0);
+			editorFragment = EditorFragment.Companion.newInstance(0);
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.fragmentContainer, editorFragment, FRAGMENT_TAG)
 					.commit();
