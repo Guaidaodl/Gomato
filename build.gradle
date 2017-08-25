@@ -33,4 +33,10 @@ ext {
 
     // support 包的版本
     supportVersion="26.0.1"
+
+    // stetho
+    stethoVersion="1.5.0"
+
+    // leakCanary
+    leakCanaryVersion="1.5.1"
 }

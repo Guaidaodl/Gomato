@@ -13,7 +13,9 @@
 		<item name="colorAccent">@color/primaryDarkColor</item>
 
 		<item name="android:colorBackground">@color/primaryBackgroundColor</item>
+
 		<item name="android:textColorPrimary">@color/primaryTextColor</item>
+		<item name="android:textColorPrimaryInverse">@color/primaryTextColorInverse</item>
 		<item name="android:textColorSecondary">@color/secondaryTextColor</item>
 	</style>
 

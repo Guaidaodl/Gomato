@@ -42,6 +42,11 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$archVersion"
     annotationProcessor "android.arch.persistence.room:compiler:$archVersion"
 
+    debugImplementation "com.facebook.stetho:stetho:$stethoVersion"
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+
+    releaseApi "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+
     testImplementation 'junit:junit:4.12'
 
     androidTestImplementation 'com.android.support.test:runner:1.0.0'
