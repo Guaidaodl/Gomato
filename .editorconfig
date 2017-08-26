@@ -1,0 +1,14 @@
+root = true
+
+[*]
+end_of_line = crlf
+trim_trailing_whitespace = true
+
+[*.{java, kt, gradle}]
+indent_style = tab
+indent_size = 4
+
+[*.xml]
+indent_style = tab
+indent_size = 2
+
