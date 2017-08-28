@@ -15,14 +15,14 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content">
 				<android.support.v7.widget.Toolbar
-						android:id="@+id/toolBar"
+						android:id="@+id/toolbar"
 						tools:title="Gomato"
 						app:titleTextColor="?android:attr/textColorPrimaryInverse"
 						android:layout_width="match_parent"
 						android:layout_height="?android:attr/actionBarSize"/>
 			</android.support.design.widget.AppBarLayout>
 			<FrameLayout
-					android:id="@+id/fragmentContainer"
+					android:id="@+id/fragment_container"
 					app:layout_behavior="@string/appbar_scrolling_view_behavior"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"/>

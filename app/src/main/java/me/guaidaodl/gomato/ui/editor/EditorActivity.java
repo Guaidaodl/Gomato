@@ -1,7 +1,6 @@
 package me.guaidaodl.gomato.ui.editor;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -23,7 +22,7 @@ public class EditorActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_editor);
-		Toolbar t = findViewById(R.id.toolBar);
+		Toolbar t = findViewById(R.id.toolbar);
 		setSupportActionBar(t);
 		if(!initFragment(savedInstanceState)) {
 			finish();
@@ -34,7 +33,7 @@ public class EditorActivity extends BaseActivity {
 		if (savedInstanceState == null) {
 			editorFragment = EditorFragment.Companion.newInstance(0);
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.fragmentContainer, editorFragment, FRAGMENT_TAG)
+					.add(R.id.fragment_container, editorFragment, FRAGMENT_TAG)
 					.commit();
 		} else {
 			Fragment f = getSupportFragmentManager()
