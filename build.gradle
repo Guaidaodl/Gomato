@@ -8,7 +8,7 @@ buildscript {
 		jcenter()
 	}
 	dependencies {
-		classpath 'com.android.tools.build:gradle:3.0.0-beta2'
+		classpath 'com.android.tools.build:gradle:3.0.0-beta3'
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
 
 		// NOTE: Do not place your application dependencies here; they belong
@@ -33,6 +33,9 @@ ext {
 
 	// support 包的版本
 	supportVersion="26.0.1"
+
+	// databinding compelier
+	databindingVersion="2.3.3"
 
 	// stetho
 	stethoVersion="1.5.0"
