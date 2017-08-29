@@ -19,6 +19,7 @@ android {
 		versionName "1.0"
 		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 	}
+
 	buildTypes {
 		debug {
 			applicationIdSuffix ".debug"
@@ -28,6 +29,7 @@ android {
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}
+
 }
 
 kapt {
@@ -36,6 +38,7 @@ kapt {
 
 dependencies {
 	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	implementation project(path: ':wall')
 	implementation project(path: ':common')
 	implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlinVersion"
 
@@ -57,7 +60,7 @@ dependencies {
 
 	releaseApi "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
 
-	testImplementation 'junit:junit:4.12'
+	testImplementation "junit:junit:$junitVersion"
 
 	androidTestImplementation 'com.android.support.test:runner:1.0.0'
 	androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.0'

@@ -21,6 +21,7 @@ class TaskListActivity: BaseActivity() {
 
 		val toolbar: Toolbar = findViewById(R.id.toolbar)
 		setSupportActionBar(toolbar)
+		toolbar.setTitle(R.string.title_activity_list)
 
 		if (savedInstanceState == null) {
 			listFragment = TaskListFragment()
