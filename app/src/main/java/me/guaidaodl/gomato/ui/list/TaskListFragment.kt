@@ -9,11 +9,9 @@ import me.guaidaodl.gomato.databinding.FragmentListBinding
 import me.guaidaodl.gomato.ui.base.BaseFragment
 import me.guaidaodl.gomato.ui.editor.EditorActivity
 
-
 /**
  * @author Guaidaodl
  */
-
 class TaskListFragment: BaseFragment() {
 
 	private lateinit var binding:FragmentListBinding
@@ -22,8 +20,12 @@ class TaskListFragment: BaseFragment() {
 		val root = inflater?.inflate(R.layout.fragment_list, container, false)
 		binding = FragmentListBinding.bind(root)
 
-		binding.fab.setOnClickListener { _ -> EditorActivity.startForNewTask(context) }
+		binding.fab.setOnClickListener { _ -> onClickFab() }
 
 		return root
+	}
+
+	private fun onClickFab() {
+		EditorActivity.startForNewTask(context)
 	}
 }

@@ -29,17 +29,19 @@ task clean(type: Delete) {
 
 ext {
 	// architecture component 的版本
-	archVersion="1.0.0-alpha9"
+	archVersion = "1.0.0-alpha9"
 
 	// support 包的版本
-	supportVersion="26.0.1"
+	supportVersion = "26.0.1"
 
 	// databinding compelier
-	databindingVersion="2.3.3"
+	databindingVersion = "2.3.3"
 
 	// stetho
-	stethoVersion="1.5.0"
+	stethoVersion = "1.5.0"
 
 	// leakCanary
-	leakCanaryVersion="1.5.1"
+	leakCanaryVersion = "1.5.1"
+
+	commonsIoVersion = "2.4"
 }
