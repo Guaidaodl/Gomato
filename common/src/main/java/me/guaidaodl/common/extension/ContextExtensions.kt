@@ -5,7 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.net.Uri
 import android.provider.OpenableColumns
-import me.guaidaodl.common.logger.Logger
+import me.guaidaodl.common.logger.GLogger
 import me.guaidaodl.common.uri.UriInfo
 import org.apache.commons.io.IOUtils
 import java.lang.Exception
@@ -27,7 +27,7 @@ fun Context.queryUriInfo(uri: Uri): UriInfo? {
 
 		return UriInfo(name, type, size)
 	} catch (e: Exception) {
-		Logger.e(TAG, message = "query failed $uri", tr = e)
+		GLogger.e(TAG, message = "query failed $uri", tr = e)
 		return null
 	} finally {
 		IOUtils.closeQuietly(c)

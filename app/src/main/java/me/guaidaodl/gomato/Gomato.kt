@@ -5,7 +5,7 @@ import com.squareup.leakcanary.LeakCanary
 import me.guaidaodl.common.debug.initDebugTools
 
 /**
- * @Guaidaodl
+ * @author Guaidaodl
  */
 class Gomato : Application() {
 	override fun onCreate() {

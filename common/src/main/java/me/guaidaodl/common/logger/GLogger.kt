@@ -5,7 +5,7 @@ import android.util.Log
 /**
  * @author Guaidaodl
  */
-class Logger {
+class GLogger {
 	companion object {
 		fun v(tag: String, message: String) {
 			Log.i(tag, message)
