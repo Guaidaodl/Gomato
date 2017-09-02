@@ -3,7 +3,7 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools">
 	<data>
-		<variable name="item" type="me.guaidaodl.gomato.ui.list.TaskListAdapter.TaskViewModel"/>
+		<variable name="item" type="me.guaidaodl.gomato.api.model.Task"/>
 		<variable name="delegate" type="me.guaidaodl.gomato.ui.list.TaskListAdapter.Delegate"/>
 	</data>
 	<LinearLayout

@@ -11,5 +11,5 @@ import me.guaidaodl.gomato.persistence.room.entity.TaskEntity
  */
 @Database(entities = arrayOf(TaskEntity::class), version = 1)
 abstract class TaskDatabase : RoomDatabase() {
-	abstract fun taskDao(): RoomTaskDao
+	abstract val taskDao: RoomTaskDao
 }

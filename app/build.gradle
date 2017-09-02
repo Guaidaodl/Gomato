@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -29,7 +28,16 @@ android {
 			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 		}
 	}
+	flavorDimensions "DataSource"
+	productFlavors {
+		prod {
+			dimension "DataSource"
+		}
 
+		mock {
+			dimension "DataSource"
+		}
+	}
 }
 
 kapt {
@@ -54,6 +62,9 @@ dependencies {
 
 	implementation "android.arch.persistence.room:runtime:$archVersion"
 	kapt "android.arch.persistence.room:compiler:$archVersion"
+
+	implementation "com.google.dagger:dagger:$daggerVersion"
+	kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
 	debugImplementation "com.facebook.stetho:stetho:$stethoVersion"
 	debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
