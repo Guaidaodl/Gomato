@@ -40,8 +40,7 @@ abstract class BaseDataBindingAdapter<Item, Delegate>:
 
 	fun getDelegate(position: Int): Delegate? = null
 
-	fun initView(binding: ViewDataBinding) {
-	}
+	fun initView(binding: ViewDataBinding) {}
 
 	class BaseViewHolder<in Item, in Delegate>(val binding: ViewDataBinding)
 			: RecyclerView.ViewHolder(binding.root) {

@@ -13,7 +13,7 @@ import javax.inject.Singleton
  * @author Guaidaodl
  */
 @Module
-class ModelModuleD(context: Context) {
+class ModelModule(context: Context) {
 	private val database: TaskDatabase
 			= Room.databaseBuilder(context, TaskDatabase::class.java, "Gomato")
 					.build()

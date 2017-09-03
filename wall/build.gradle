@@ -50,6 +50,7 @@ dependencies {
 	implementation "com.google.dagger:dagger:$daggerVersion"
 	kapt "com.google.dagger:dagger-compiler:$daggerVersion"
 
+	// 只有 prod 分支才需要依赖数据库
 	prodImplementation "android.arch.persistence.room:runtime:$archVersion"
 	kapt "android.arch.persistence.room:compiler:$archVersion"
 
