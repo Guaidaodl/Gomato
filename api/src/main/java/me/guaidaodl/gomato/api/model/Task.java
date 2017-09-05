@@ -1,16 +1,21 @@
 package me.guaidaodl.gomato.api.model;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /**
  * @author Guaidaodl
  */
 
 public interface Task {
+	@NotNull
 	String getId();
-	void setId(String id);
 
+	@Nullable
 	String getSubject();
-	void setSubject(String subject);
+	void setSubject(@Nullable String subject);
 
+	@Nullable
 	String getDescription();
-	void setDescription(String description);
+	void setDescription(@Nullable String description);
 }

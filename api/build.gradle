@@ -2,6 +2,7 @@ apply plugin: 'java-library'
 
 dependencies {
 	implementation fileTree(include: ['*.jar'], dir: 'libs')
+	implementation 'org.jetbrains:annotations:13.0'
 }
 
 sourceCompatibility = "1.7"

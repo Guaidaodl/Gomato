@@ -5,7 +5,6 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import me.guaidaodl.common.logger.GLogger
 import me.guaidaodl.gomato.Gomato
 import me.guaidaodl.gomato.R
 import me.guaidaodl.gomato.api.dao.TaskDao
@@ -17,11 +16,12 @@ import javax.inject.Inject
 /**
  * @author Guaidaodl
  */
-class TaskListFragment: BaseFragment() {
+class TaskListFragment: BaseFragment<TaskListFragment.Delegate>(), TaskListAdapter.Delegate {
 
 	@Inject
 	lateinit var taskDao: TaskDao
 	private lateinit var binding:FragmentListBinding
+	private var taskListAdapter: TaskListAdapter? = null
 
 	init {
 		Gomato.appComponent.inject(this)
@@ -34,16 +34,20 @@ class TaskListFragment: BaseFragment() {
 		binding.fab.setOnClickListener { _ -> onClickFab() }
 
 		binding.list.layoutManager = LinearLayoutManager(context)
-		try {
-			binding.list.adapter = TaskListAdapter(taskDao)
-		} catch (e: Exception) {
-			GLogger.e("Test", "msg", e)
-		}
 
 		return root
+	}
+
+	override fun onResume() {
+		super.onResume()
+		taskListAdapter = TaskListAdapter(taskDao)
+		taskListAdapter?.delegate = this
+		binding.list.adapter = taskListAdapter
 	}
 
 	private fun onClickFab() {
 		EditorActivity.startForNewTask(context)
 	}
+
+	interface Delegate
 }

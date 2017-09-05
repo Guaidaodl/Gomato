@@ -8,13 +8,14 @@ import me.guaidaodl.gomato.ui.base.BaseActivity
 /**
  * @author Guaidaodl
  */
-class TaskListActivity: BaseActivity() {
+class TaskListActivity: BaseActivity(), TaskListFragment.Delegate {
 
 	companion object {
 		val LIST_FRAGMENT_TAG = "fragment_list_tag"
 	}
 
 	private lateinit var listFragment: TaskListFragment
+
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_list)

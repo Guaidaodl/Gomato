@@ -9,11 +9,15 @@ class TaskListAdapter(taskDao: TaskDao): BaseDataBindingAdapter<Task, TaskListAd
 
 	private val taskList: List<Task> = taskDao.listAllTask()
 
+	var delegate: Delegate? = null
+
 	override fun getItemCount() = taskList.size
 
 	override fun getLayoutId(position: Int) = R.layout.task_list_item
 
 	override fun getItem(position: Int) = taskList[position]
+
+	override fun getDelegate(position: Int): Delegate? = delegate
 
 	interface Delegate
 }

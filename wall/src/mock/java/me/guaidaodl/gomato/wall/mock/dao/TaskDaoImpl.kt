@@ -13,7 +13,7 @@ internal class TaskDaoImpl: TaskDao {
 	private var id = AtomicInteger(0)
 
 	init {
-		taskList = ArrayList<Task>()
+		taskList = ArrayList()
 		taskList.add(TaskEntity("" + id.getAndIncrement(), "Task 1", "empty"))
 		taskList.add(TaskEntity("" + id.getAndIncrement(), "Task 2", "empty"))
 		taskList.add(TaskEntity("" + id.getAndIncrement(), "Task 3", "empty"))
@@ -24,13 +24,14 @@ internal class TaskDaoImpl: TaskDao {
 		taskList.add(TaskEntity("" + id.getAndIncrement(), "Task 8", "empty"))
 	}
 
+	override fun createTask(): Task {
+		return TaskEntity("" + id.getAndIncrement())
+	}
+
 	override fun findTask(id: String): Task? {
 		val task = taskList.asSequence().filter { it.id == id }.firstOrNull()
-		if (task != null) {
-			return TaskEntity(task)
-		} else {
-			return null
-		}
+
+		return if (task != null)  TaskEntity(task) else null
 	}
 
 	override fun listAllTask(): MutableList<out Task> {
@@ -38,11 +39,10 @@ internal class TaskDaoImpl: TaskDao {
 	}
 
 	override fun insertOrUpdate(task: Task) {
-		val t = if (task.id != null) findTask(task.id) else null
+		val t = findTask(task.id)
 
 		if (t == null) {
-			val newTask = TaskEntity("" + id.getAndIncrement(), task.subject, task.description)
-			task.id = newTask.id
+			taskList.add(TaskEntity(task))
 		} else {
 			t.subject = task.subject
 			t.description = task.description

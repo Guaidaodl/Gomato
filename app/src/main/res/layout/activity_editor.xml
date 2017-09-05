@@ -18,6 +18,7 @@
 						android:id="@+id/toolbar"
 						tools:title="Gomato"
 						app:titleTextColor="?android:attr/textColorPrimaryInverse"
+						app:navigationIcon="@drawable/ic_actionbar_back"
 						android:layout_width="match_parent"
 						android:layout_height="?android:attr/actionBarSize"/>
 			</android.support.design.widget.AppBarLayout>
@@ -26,5 +27,13 @@
 					app:layout_behavior="@string/appbar_scrolling_view_behavior"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"/>
+			<android.support.design.widget.FloatingActionButton
+				android:id="@+id/fab"
+				android:src="@drawable/ic_fab_check"
+				app:layout_anchor="@id/fragment_container"
+				app:layout_anchorGravity="bottom|right"
+				android:layout_width="@dimen/fab_size"
+				android:layout_height="@dimen/fab_size"
+				android:layout_margin="@dimen/fab_margin"/>
 		</android.support.design.widget.CoordinatorLayout>
 </FrameLayout>

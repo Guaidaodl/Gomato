@@ -11,38 +11,38 @@ import java.util.*
  */
 
 @Entity(tableName = "tasks")
-class TaskEntity : Task {
+class TaskEntity: Task {
 	@PrimaryKey
 	@ColumnInfo(name = "id")
 	private var id = UUID.randomUUID().toString()
 
 	@ColumnInfo(name = "subject")
-	private var subject = ""
+	private var subject: String? = null
 
 	@ColumnInfo(name = "description")
-	private var description = ""
+	private var description:String? = null
 
 	override fun getId(): String {
 		return id
 	}
 
-	override fun setId(id: String) {
+	fun setId(id: String) {
 		this.id = id
 	}
 
-	override fun getSubject(): String {
+	override fun getSubject(): String? {
 		return subject
 	}
 
-	override fun setSubject(subject: String) {
+	override fun setSubject(subject: String?) {
 		this.subject = subject
 	}
 
-	override fun getDescription(): String {
+	override fun getDescription(): String? {
 		return description
 	}
 
-	override fun setDescription(description: String) {
+	override fun setDescription(description: String?) {
 		this.description = description
 	}
 }
